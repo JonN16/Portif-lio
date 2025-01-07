@@ -6,15 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="icon" href="img/logos/J.png" type="image/png">
 </head>
 <body>
     <header>
-        <h1>JonN</h1>
+        <img src="img/logos/J.png" alt="Site Logo" class="logo-site">
     <nav>
         <button>Home</button>
-        <button>profile</button>
-        <button>projects</button>
-        <button>contact</button>
+        <button>Profile</button>
+        <button>Projects</button>
+        <button>Contact</button>
     </nav>
     </header>
     <main>
@@ -55,21 +56,44 @@
             </div>
         </div>
     </div>
+    
     <div class="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
+        <h2 id="info-title">Languages I Know</h2>
+        <div class="project-buttons">
+            <button id="projects-button" onclick="showProjects()">
+                <img src="img/logos/projects.png" alt="Projects Icon">
+                Projects
+            </button>
+            <button id="skills-button" onclick="showSkills()">
+                <img src="img/logos/Skills.png" alt="Skills Icon">
+                Skills
+            </button>
+        </div>
+        <div id="project-list" class="project-list hidden">
             <div class="project-item">
-                <h3>Project 1</h3>
                 <img src="img/Jogador.png" alt="Project 1 Image">
+                <h3>Project 1</h3>
                 <p>Description of project 1.</p>
-                <a href="project1.html" class="project-link">View Project</a>
+                <a href="project1.html" class="project-link">Details</a>
             </div>
             <div class="project-item">
-                <h3>Project 2</h3>
                 <img src="img/Jogos.png" alt="Project 2 Image">
+                <h3>Project 2</h3>
                 <p>Description of project 2.</p>
-                <a href="project2.html" class="project-link">View Project</a>
+                <a href="project2.html" class="project-link">Details</a>
             </div>
+        </div>
+        <div id="skills-list" class="skills-list">
+            <ul>
+                <li><img src="img/logos/HTML.png" alt="HTML"><p>HTML - Advanced</p></li>
+                <li><img src="img/logos/CSS.png" alt="CSS"><p>CSS - Advanced</p></li>
+                <li><img src="img/logos/Canva.png" alt="Canva"><p>Canva - Intermediate</p></li>
+                <li><img src="img/logos/javascript.svg" alt="JavaScript"><p>JavaScript - Intermediate</p></li>
+                <li><img src="img/logos/Python.png" alt="Python"><p>Python - Intermediate</p></li>
+                <li><img src="img/logos/bootstrap.png" alt="Bootstrap" style="margin-top: 16px;"><p>Bootstrap - Intermediate</p></li>
+                <li><img src="img/logos/Node.png" alt="Node.js"><p>Node.js - Beginner</p></li>
+                <li><img src="img/logos/C++.png" alt="C++"><p>C++ - Beginner</p></li>
+            </ul>
         </div>
     </div>
     <div class="contact">

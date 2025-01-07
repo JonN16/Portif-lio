@@ -1,6 +1,26 @@
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #00ffff; /* Neon blue */
+    --secondary-color: #00ff00; /* Neon green */
+    --hover-color: #00cc00; /* Slightly darker neon green */
+    --border-color: #00ffff; /* Neon blue */
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --gradient-start: #333333;
+    --gradient-end: #444444;
+    --skills-gradient-start: #1e1e1e;
+    --skills-gradient-end: #3a3a3a;
+    --skills-hover-gradient-start: #3a3a3a;
+    --skills-hover-gradient-end: #1e1e1e;
+    --skills-shadow: rgba(0, 0, 0, 0.15);
+    --skills-hover-shadow: rgba(0, 0, 0, 0.3);
+    --skills-border: rgba(255, 255, 255, 0.7);
+    --skills-text-shadow: rgba(0, 0, 0, 0.3);
+}
+
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
 }
 
@@ -17,7 +37,7 @@ header {
 }
 
 header h1 {
-    color: #00ff00; /* Neon green */
+    color: var(--secondary-color); /* Neon green */
 }
 
 nav {
@@ -26,7 +46,7 @@ nav {
 }
 
 header button {
-    background-color: #00ff0000; /* Neon green */
+    background-color: var(--secondary-color); /* Neon green */
     border: none;
     border-radius: 10%;
     color: blue;
@@ -37,7 +57,7 @@ header button {
 }
 
 header button:hover {
-    background-color: #00cc00; /* Slightly darker neon green */
+    background-color: var(--hover-color); /* Slightly darker neon green */
 }
 
 .main {
@@ -53,7 +73,7 @@ header button:hover {
 }
 
 .home h1 {
-    color: #00ffff;
+    color: var(--primary-color);
     font-size: 12vh;
     font-family: 'MinhaFonte', sans-serif;
     margin-bottom: 10px; /* Reduce bottom margin */
@@ -81,9 +101,9 @@ header button:hover {
 }
 
 .home ul button {
-    background-color: #00ff00; /* Neon green */
+    background-color: var(--secondary-color); /* Neon green */
     border: none;
-    color: #121212;
+    color: var(--background-color);
     margin: 5px;
     font-size: 16px;
     font-weight: 600;
@@ -100,7 +120,7 @@ header button:hover {
 }
 
 .home ul button:hover {
-    background-color: #00cc00; /* Slightly darker neon green */
+    background-color: var(--hover-color); /* Slightly darker neon green */
 }
 
 .fundo {
@@ -116,16 +136,14 @@ header button:hover {
     max-width: 40px;
     min-height: 40px;
     min-width: 0px;
-    box-shadow: #00ff00 0px 3px 20px 0px;
+    box-shadow: var(--secondary-color) 0px 3px 20px 0px;
 }
 
 .perfil {
-    background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
     padding: 40px;
     margin: 30px 0;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .perfil-content {
@@ -141,8 +159,8 @@ header button:hover {
     max-width: 200px;
     border-radius: 50%;
     margin-left: 20px; /* Espaçamento à esquerda para separar da descrição */
-    border: 4px solid #00ffff; /* Neon blue border */
-    box-shadow: 0 0 15px #00ffff; /* Neon glow */
+    border: 4px solid var(--primary-color); /* Neon blue border */
+    box-shadow: 0 0 15px var(--primary-color); /* Neon glow */
 }
 
 .perfil-details {
@@ -155,7 +173,7 @@ header button:hover {
 }
 
 .perfil h1, .perfil h2 {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     font-family: 'MinhaFonte', sans-serif;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -179,8 +197,8 @@ header button:hover {
 }
 
 .perfil ul li {
-    background: linear-gradient(135deg, #333333, #444444);
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-color);
     padding: 10px 20px;
     margin: 5px;
     border-radius: 8px;
@@ -192,28 +210,26 @@ header button:hover {
 
 .perfil ul li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5); /* Neon glow on hover */
+    box-shadow: 0 4px 15px var(--primary-color); /* Neon glow on hover */
 }
 
 .perfil p#skills, .perfil p#hobbies {
     font-weight: bold;
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     font-size: 1.2em;
     margin-top: 20px;
     text-transform: uppercase;
 }
 
 .contact {
-    background-color: #1e1e1e;
     padding: 40px;
     margin: 30px 0;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .contact h2 {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     font-family: 'MinhaFonte', sans-serif;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -228,7 +244,7 @@ header button:hover {
 
 .contact label {
     margin-top: 10px;
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
 }
 
 .contact input, .contact textarea {
@@ -237,22 +253,22 @@ header button:hover {
     width: 100%;
     max-width: 500px;
     background-color: #333333;
-    border: 1px solid #00ffff; /* Neon blue */
-    color: #ffffff;
+    border: 1px solid var(--primary-color); /* Neon blue */
+    color: var(--text-color);
 }
 
 .contact button {
     margin-top: 10px;
     padding: 10px;
     width: 100px;
-    background-color: #00ff00; /* Neon green */
+    background-color: var(--secondary-color); /* Neon green */
     border: none;
-    color: #121212;
+    color: var(--background-color);
     cursor: pointer;
 }
 
 .contact button:hover {
-    background-color: #00cc00; /* Slightly darker neon green */
+    background-color: var(--hover-color); /* Slightly darker neon green */
 }
 
 .contact-info {
@@ -270,7 +286,7 @@ header button:hover {
 }
 
 .contact-info a {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -280,7 +296,7 @@ header button:hover {
 }
 
 .nav-link {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
@@ -292,16 +308,14 @@ header button:hover {
 }
 
 .projects {
-    background-color: #1e1e1e;
     padding: 40px;
     margin: 30px 0;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .projects h2 {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     font-family: 'MinhaFonte', sans-serif;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -316,8 +330,8 @@ header button:hover {
 }
 
 .project-item {
-    background: linear-gradient(135deg, #333333, #444444);
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-color);
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
@@ -329,11 +343,11 @@ header button:hover {
 
 .project-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.5); /* Neon glow on hover */
+    box-shadow: 0 4px 15px var(--primary-color); /* Neon glow on hover */
 }
 
 .project-item h3 {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     margin-bottom: 10px;
 }
 
@@ -349,7 +363,7 @@ header button:hover {
 }
 
 .project-link {
-    color: #00ffff; /* Neon blue */
+    color: var(--primary-color); /* Neon blue */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -358,3 +372,151 @@ header button:hover {
 .project-link:hover {
     color: #00ccff; /* Slightly lighter neon blue */
 }
+
+.project-buttons{
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+    width: 98%;
+    background-color: #00cc0000;
+    border: #0000001f solid;
+    box-shadow: rgba(255, 255, 255, 0.359) 0px 0px 3px 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+.project-buttons button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(240, 255, 255, 0);
+    border: none;
+    color: var(--secondary-color);
+    width: 49%;
+    margin-left: 0.5%;
+    height: 10vh;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-buttons button img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-left: 10px;;
+}
+
+.projects button:hover {
+    background-color: var(--hover-color);
+    color: var(--background-color); /* Slightly darker neon green */
+}
+
+.projects button.active {
+    background-color: var(--secondary-color); 
+    color: var(--background-color);
+}
+
+.project-buttons button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.skills-list {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.skills-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Espaçamento dinâmico entre os itens */
+}
+
+.skills-list li {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.41), #3a3a3a7d); /* Gradiente vibrante */
+    color: var(--text-color);
+    padding: 20px;
+    margin: 0;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    font-size: 1.1em; /* Tamanho de fonte levemente maior */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px var(--skills-shadow); /* Sombra leve */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Consistent spacing between image and text */
+}
+
+.skills-list li:hover {
+    transform: translateY(-10px); /* Efeito de elevação */
+    box-shadow: 0 12px 24px var(--skills-hover-shadow); /* Sombra mais intensa */
+    background: linear-gradient(135deg,  #3a3a3a7d,  rgba(0, 0, 0, 0.41)); /* Inverte o gradiente ao passar o mouse */
+}
+
+.skills-list img {
+    width: 90px; /* Tamanho um pouco maior */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover img {
+    transform: rotate(15deg) scale(1.2); /* Rotação e aumento dinâmicos */
+}
+
+.skills-list p {
+    margin: 10px 0 0;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.5px; /* Melhor espaçamento entre letras */
+}
+
+.skills-list li:hover p {
+    text-shadow: 0 2px 4px var(--skills-text-shadow); /* Adiciona um leve brilho ao texto */
+}
+
+.language-placeholder {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.logo-site {
+    width: 10vh;
+    height: 10vh;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+
+
