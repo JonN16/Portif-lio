@@ -1,125 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="skills.css">
     <script src="script.js"></script>
     <link rel="icon" href="img/logos/J.png" type="image/png">
 </head>
+
 <body>
     <header>
         <img src="img/logos/J.png" alt="Site Logo" class="logo-site">
-    <nav>
-        <button>Home</button>
-        <button>Profile</button>
-        <button>Projects</button>
-        <button>Contact</button>
-    </nav>
+        <nav>
+            <button onclick="scrollToSection('home')">Home</button>
+            <button onclick="scrollToSection('profile')">Profile</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </nav>
     </header>
     <main>
-    <div class="home">
-        <h1>Programmer</h1>
-        <div class="escrita">Network & Telecom Student</div>
-        <p>With a passion for coding, I bring ideas to life through programming.</p>
-        <p>Experienced in creating modern, user-friendly websites and applications.</p>
-        <img src="img/fundo.png" alt="" class="fundo">
-        <ul>
-            <button>python</button>
-            <button>javascript</button>
-            <button>Node.js</button>
-            <button>C++</button>
-        </ul>
-        <ul>
-            <img src="" alt="GitHub">
-            <img src="" alt="LinkedIn">
-            <img src="img/Instagram.png" alt="Instagram" class="social-icon">
-        </ul>
-    </div>
-    <div class="perfil">
-        <h1>About Me</h1>
-        <div class="perfil-content">
-            <img src="img/fundo.png" alt="Profile Picture" class="perfil-img">
-            <div class="perfil-details">
-                <h1>Hello, I'm</h1>
-                <h2>João Eduardo</h2>
-                <p>Web Developer</p>
-                <p>I am a passionate web developer with experience in creating dynamic and responsive websites. I enjoy working with modern web technologies and continuously learning new skills.</p>
-                <p id="hobbies">Hobbies:</p>
+        <div id="home" class="home">
+            <h1>Programmer</h1>
+            <div class="escrita">Network & Telecom Student</div>
+            <p>With a passion for coding, I bring ideas to life through programming.</p>
+            <p>Experienced in creating modern, user-friendly websites and applications.</p>
+            <img src="img/fundo.png" alt="" class="fundo" style="max-width: 40%; height: auto;">
+            <ul>
+                <li><button>python</button></li>
+                <li><button>javascript</button></li>
+                <li><button>Node.js</button></li>
+                <li><button>C++</button></li>
+            </ul>
+            <ul>
+                <li><img src="" alt="GitHub"></li>
+                <li><img src="" alt="LinkedIn"></li>
+                <li><img src="img/Instagram.png" alt="Instagram" class="social-icon"></li>
+            </ul>
+        </div>
+        <div id="profile" class="perfil">
+            <h1>ABOUT ME</h1>
+            <div class="perfil-content">
+                <div class="esquerda-perfil">
+                    <img src="img/fundo.png" alt="Profile Picture" class="perfil-img">
+                    <h1>João Eduardo</h1>
+                    <p class="subheading">Web Developer</p>
+                    <div class="social-links" style="display: flex; justify-content: center;">
+                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon" style="width: 70px;"></li>
+                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon" style="width: 70px;"></li>
+                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon" style="width: 70px;"></li>
+                    </div>
+                </div>
+                <div class="direita-perfil">
+                    <div class="perfil-details">
+                        <h2>HELLO!</h2>
+                        <h3>Here's who I am & what I do</h3>
+                        <p>I am a passionate web developer with experience in creating dynamic and responsive websites.
+                            I enjoy working with modern web technologies and continuously learning new skills.</p>
+                        <p id="hobbies">Hobbies:</p>
+                        <ul>
+                            <li><i class="fas fa-code"></i> Coding</li>
+                            <li><i class="fas fa-book"></i> Reading</li>
+                            <li><i class="fas fa-plane"></i> Traveling</li>
+                            <li><i class="fas fa-camera"></i> Photography</li>
+                        </ul>
+                        <p>Let's connect and create something amazing together!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="projects" class="projects">
+            <h2 id="info-title">Languages I Know</h2>
+            <div class="project-buttons">
+                <button id="projects-button" onclick="showProjects()">
+                    <img src="img/logos/projects.png" alt="Projects Icon">
+                    Projects
+                </button>
+                <button id="skills-button" onclick="showSkills()">
+                    <img src="img/logos/Skills.png" alt="Skills Icon">
+                    Skills
+                </button>
+            </div>
+            <div id="project-list" class="project-list hidden">
+                <div class="project-item">
+                    <img src="img/Jogador.png" alt="Project 1 Image">
+                    <h3>Project 1</h3>
+                    <p>Description of project 1.</p>
+                    <a href="project1.html" class="project-link">Details</a>
+                </div>
+                <div class="project-item">
+                    <img src="img/Jogos.png" alt="Project 2 Image">
+                    <h3>Project 2</h3>
+                    <p>Description of project 2.</p>
+                    <a href="project2.html" class="project-link">Details</a>
+                </div>
+            </div>
+            <div id="skills-list" class="skills-list">
                 <ul>
-                    <li>Coding</li>
-                    <li>Reading</li>
-                    <li>Traveling</li>
-                    <li>Photography</li>
+                    <li><img src="img/logos/HTML.png" alt="HTML">
+                        <p>HTML - Advanced</p>
+                    </li>
+                    <li><img src="img/logos/CSS.png" alt="CSS">
+                        <p>CSS - Advanced</p>
+                    </li>
+                    <li><img src="img/logos/Canva.png" alt="Canva">
+                        <p>Canva - Intermediate</p>
+                    </li>
+                    <li><img src="img/logos/javascript.svg" alt="JavaScript">
+                        <p>JavaScript - Intermediate</p>
+                    </li>
+                    <li><img src="img/logos/Python.png" alt="Python">
+                        <p>Python - Intermediate</p>
+                    </li>
+                    <li><img src="img/logos/GameMaker.png" alt="Python">
+                        <p>GameMaker - Intermediate</p>
+                    </li>
+                    <li><img src="img/logos/bootstrap.png" alt="Bootstrap" style="margin-top: 16px;">
+                        <p>Bootstrap - Intermediate</p>
+                    </li>
+                    <li><img src="img/logos/Node.png" alt="Node.js">
+                        <p>Node.js - Beginner</p>
+                    </li>
+                    <li><img src="img/logos/C++.png" alt="C++">
+                        <p>C++ - Beginner</p>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-    
-    <div class="projects">
-        <h2 id="info-title">Languages I Know</h2>
-        <div class="project-buttons">
-            <button id="projects-button" onclick="showProjects()">
-                <img src="img/logos/projects.png" alt="Projects Icon">
-                Projects
-            </button>
-            <button id="skills-button" onclick="showSkills()">
-                <img src="img/logos/Skills.png" alt="Skills Icon">
-                Skills
-            </button>
-        </div>
-        <div id="project-list" class="project-list hidden">
-            <div class="project-item">
-                <img src="img/Jogador.png" alt="Project 1 Image">
-                <h3>Project 1</h3>
-                <p>Description of project 1.</p>
-                <a href="project1.html" class="project-link">Details</a>
+        <div id="contact" class="contact" style="text-align: left;">
+            <div class="contact-esquerda">
+                <h1>CONTACT</h1>
+                <h1 style="text-decoration: underline;">ME</h1>
+                <h2>JoaoeduardoFreitas9@gmail.com</h2>
             </div>
-            <div class="project-item">
-                <img src="img/Jogos.png" alt="Project 2 Image">
-                <h3>Project 2</h3>
-                <p>Description of project 2.</p>
-                <a href="project2.html" class="project-link">Details</a>
+            <div class="contact-direita">
+                <form action="#" method="post">
+                    <input type="text" id="name" name="name" placeholder="NAME" required>
+                    <input type="email" id="email" name="email" placeholder="EMAIL" required>
+                    <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
+                    <div>
+                    <button type="submit">SEND</button>
+                    <button type="reset">CANCEL</button>
+                </div>
+                </form>
             </div>
         </div>
-        <div id="skills-list" class="skills-list">
-            <ul>
-                <li><img src="img/logos/HTML.png" alt="HTML"><p>HTML - Advanced</p></li>
-                <li><img src="img/logos/CSS.png" alt="CSS"><p>CSS - Advanced</p></li>
-                <li><img src="img/logos/Canva.png" alt="Canva"><p>Canva - Intermediate</p></li>
-                <li><img src="img/logos/javascript.svg" alt="JavaScript"><p>JavaScript - Intermediate</p></li>
-                <li><img src="img/logos/Python.png" alt="Python"><p>Python - Intermediate</p></li>
-                <li><img src="img/logos/bootstrap.png" alt="Bootstrap" style="margin-top: 16px;"><p>Bootstrap - Intermediate</p></li>
-                <li><img src="img/logos/Node.png" alt="Node.js"><p>Node.js - Beginner</p></li>
-                <li><img src="img/logos/C++.png" alt="C++"><p>C++ - Beginner</p></li>
-            </ul>
-        </div>
-    </div>
-    <div class="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <div class="contact-info">
-            <p>You can also reach me at:</p>
-            <ul>
-                <li>Email: johndoe@example.com</li>
-                <li>Phone: +123 456 7890</li>
-                <li>LinkedIn: <a href="#">linkedin.com/in/johndoe</a></li>
-                <li>GitHub: <a href="#">github.com/johndoe</a></li>
-            </ul>
-        </div>
-    </div>
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>

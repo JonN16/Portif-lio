@@ -15,7 +15,11 @@ function showSkills() {
     document.getElementById('projects-button').classList.remove('active');
 }
 
+function scrollToSection(sectionId) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+
 // Show skills list by default
 document.addEventListener('DOMContentLoaded', function() {
-    showSkills();
+    showProjects();
 });
