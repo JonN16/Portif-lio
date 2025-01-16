@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="script.js"></script>
     <link rel="icon" href="img/logos/J.png" type="image/png">
 </head>
@@ -23,25 +24,29 @@
         </nav>
     </header>
     <main>
-        <div id="home" class="home">
-            <h1>Programmer</h1>
-            <div class="escrita">Network & Telecom Student</div>
-            <p>With a passion for coding, I bring ideas to life through programming.</p>
-            <p>Experienced in creating modern, user-friendly websites and applications.</p>
-            <img src="img/fundo.png" alt="" class="fundo" style="max-width: 40%; height: auto;">
-            <ul>
-                <li><button>python</button></li>
-                <li><button>javascript</button></li>
-                <li><button>Node.js</button></li>
-                <li><button>C++</button></li>
-            </ul>
-            <ul>
-                <li><img src="" alt="GitHub"></li>
-                <li><img src="" alt="LinkedIn"></li>
-                <li><img src="img/Instagram.png" alt="Instagram" class="social-icon"></li>
-            </ul>
-        </div>
-        <div id="profile" class="perfil">
+        <section id="home" class="home visible">
+            <div class="home-container">
+                <div class="home-content">
+                    <h1>Programmer</h1>
+                    <div class="escrita">Network & Telecom Student</div>
+                    <p>With a passion for coding, I bring ideas to life through programming.</p>
+                    <p>Experienced in creating modern, user-friendly websites and applications.</p>
+                    <ul>
+                        <li><button>python</button></li>
+                        <li><button>javascript</button></li>
+                        <li><button>Node.js</button></li>
+                        <li><button>C++</button></li>
+                    </ul>
+                    <ul>
+                        <li><img src="" alt="GitHub"></li>
+                        <li><img src="" alt="LinkedIn"></li>
+                        <li><img src="img/Instagram.png" alt="Instagram" class="social-icon"></li>
+                    </ul>
+                </div>
+                <img src="img/fundo.png" alt="" class="fundo">
+            </div>
+        </section>
+        <section id="profile" class="perfil">
             <h1>ABOUT ME</h1>
             <div class="perfil-content">
                 <div class="esquerda-perfil">
@@ -71,18 +76,18 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
 
-        <div id="projects" class="projects">
+        <section id="projects" class="projects">
             <h2 id="info-title">Languages I Know</h2>
             <div class="project-buttons">
                 <button id="projects-button" onclick="showProjects()">
-                    <img src="img/logos/projects.png" alt="Projects Icon">
+                    <img src="img/logos/projects.png" alt="Projects Icon" class="button-icon">
                     Projects
                 </button>
                 <button id="skills-button" onclick="showSkills()">
-                    <img src="img/logos/Skills.png" alt="Skills Icon">
+                    <img src="img/logos/Skills.png" alt="Skills Icon" class="button-icon">
                     Skills
                 </button>
             </div>
@@ -131,25 +136,35 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div id="contact" class="contact" style="text-align: left;">
+        </section>
+        <section id="contact" class="contact">
             <div class="contact-esquerda">
-                <h1>CONTACT</h1>
-                <h1 style="text-decoration: underline;">ME</h1>
-                <h2>JoaoeduardoFreitas9@gmail.com</h2>
+                <h1>CONTACT ME</h1>
+                <p>Feel free to reach out to me for any inquiries or collaborations.</p>
+                <p><strong>Email:</strong> joaoeduardoFreitas9@gmail.com</p>
             </div>
             <div class="contact-direita">
                 <form action="#" method="post">
-                    <input type="text" id="name" name="name" placeholder="NAME" required>
-                    <input type="email" id="email" name="email" placeholder="EMAIL" required>
-                    <textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
-                    <div>
-                    <button type="submit">SEND</button>
-                    <button type="reset">CANCEL</button>
-                </div>
+                    <div class="form__group">
+                        <input type="text" id="name" name="name" class="form__field" placeholder="Your Name" required>
+                        <label for="name" class="form__label">Name:</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" class="form__field" placeholder="Your Email" required>
+                        <label for="email" class="form__label">Email:</label>
+                    </div>
+                    <div class="form__group">
+                        <textarea id="message" name="message" class="form__field" placeholder="Your Message" required></textarea>
+                        <label for="message" class="form__label">Message:</label>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit">SEND</button>
+                        <button type="reset">CANCEL</button>
+                    </div>
                 </form>
             </div>
-        </div>
+            <img src="img/logos/J.png" alt="Contact Logo" class="contact-logo" style="position: absolute; bottom: 0; left: 0;">
+        </section>
     </main>
     <footer>
 

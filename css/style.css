@@ -1,0 +1,15 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.fundo {
+    flex: 1;
+    max-width: 50%;
+}
